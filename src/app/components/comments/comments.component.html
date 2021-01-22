@@ -1,0 +1,3 @@
+
+<app-comment *ngFor="let comment of comments" [comment]="comment" (bubbleUp)="getBubble($event)" ></app-comment>
+<app-chosen-comment [chosenComment]="chosenComment" ></app-chosen-comment>
