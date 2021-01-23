@@ -7,6 +7,7 @@ import { UserComponent } from './components/user/user.component';
 import { AddressComponent } from './components/address/address.component';
 import {RouterModule} from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { ChosenOneComponent } from './components/chosenOne/chosen-one/chosen-one.component';
 
 @NgModule({
   declarations: [
@@ -14,14 +15,15 @@ import { HomeComponent } from './components/home/home.component';
     UsersComponent,
     UserComponent,
     AddressComponent,
-    HomeComponent
+    HomeComponent,
+    ChosenOneComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {path: 'link/home', component: HomeComponent},
-      {path: 'link/users', component: UsersComponent, children:[
-          {path: ':id/info', component: AddressComponent}
+      {path: 'link/users', component: UsersComponent, children: [
+          {path: ':id/address', component: ChosenOneComponent}
         ]}
     ])
   ],

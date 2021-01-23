@@ -10,10 +10,15 @@ import {ActivatedRoute} from '@angular/router';
 export class AddressComponent implements OnInit {
 
   @Input()
+  id: number;
+
+  @Input()
   address: Address;
 
-  constructor(private activatedRoute: ActivatedRoute) {
-    this.activatedRoute.params.subscribe(value => console.log(value));
+  // constructor(private activatedRoute: ActivatedRoute) {
+  //   this.activatedRoute.params.subscribe(value => console.log(value));
+  // }
+  constructor() {
   }
 
   ngOnInit(): void {
