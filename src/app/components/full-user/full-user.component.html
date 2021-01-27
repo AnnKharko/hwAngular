@@ -1,0 +1,9 @@
+<div>
+  <p> user {{user.id}} - {{user.name}}</p>
+  <p> e-mail: {{user.email}}</p>
+  <p>address: {{user.address.city}} - {{user.address.street}} - {{user.address.suite}}</p>
+  <p>geo - lat: {{user.address.geo.lat}}, lng: {{user.address.geo.lng}}</p>
+  <button (click)="showPosts()"  >show posts</button>
+</div>
+
+<router-outlet></router-outlet>
