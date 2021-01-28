@@ -25,7 +25,7 @@ export class FullUserComponent implements OnInit {
   }
 
   showPosts(): void {
-    this.router.navigate(['posts'], {relativeTo: this.activatedRoute, state: this.post});
+    this.router.navigate(['posts'], {relativeTo: this.activatedRoute, state: this.user});
   }
 
 }
