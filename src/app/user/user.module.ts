@@ -16,7 +16,7 @@ import { FullUserComponent } from './components/full-user/full-user.component';
     UserRoutingModule,
     HttpClientModule
   ],
-  exports: [HttpClientModule, UserComponent],
+  exports: [HttpClientModule, UserComponent, UsersComponent],
   providers: [UserService]
 })
 export class UserModule { }
