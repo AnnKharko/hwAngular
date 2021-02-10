@@ -1,0 +1,20 @@
+ <div class="wrap">
+   <h1>Create car</h1>
+   <form [formGroup]="createForm" (ngSubmit)="createCar(createForm)">
+     <div>
+       <label for="brand">Brand</label>
+       <input [class.valid]="createForm.controls.brand?.valid"
+              [class.error]="!createForm.controls.brand?.valid && createForm.controls.brand?.touched" id="brand" type="text" [formControl]="brand" placeholder="enter brand" pattern="[A-Z a-z]+\s?">
+     </div>
+     <div>
+       <label for="model">Model</label>
+       <input id="model" type="text" [formControl]="model" placeholder="enter model" [class.valid]="createForm.controls.model?.valid" [class.error]="!createForm.controls.model?.valid && createForm.controls.model?.touched" pattern="([a-z 0-9 ]+\.)?[^?=+.]+">
+     </div>
+     <div>
+       <label>Year</label>
+       <input id="year" type="number" [formControl]="year" placeholder="enter year" [class.valid]="createForm.controls.year?.valid" [class.error]="!createForm.controls.year?.valid && createForm.controls.year?.touched">
+     </div>
+     <button [disabled]="!createForm.valid" >Create car</button>
+   </form>
+ </div>
+

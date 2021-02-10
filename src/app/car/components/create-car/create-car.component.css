@@ -1,0 +1,11 @@
+.error{
+  border: 1px solid red;
+}
+.valid {
+  border: 1px solid green;
+}
+.wrap {
+  border: 1px solid gray;
+  background: lightgrey;
+  padding: 15px;
+}
